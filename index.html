@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exomind TMS Therapy in Port Charlotte, FL | Arise Integrative Wellness</title>
+<meta name="description" content="FDA-cleared Exomind TMS uses focused magnetic pulses to restore healthy brain activity - no medication, no downtime. Serving Port Charlotte & Southwest Florida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lato:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+  :root{
+    --ink:#404641; --ink2:#3D423D; --sage:#505A51; --sage-hover:#434C44; --sage-light:#6B756C;
+    --tan:#C8B9A8; --brown:#392E26; --cream:#F5EFE7; --offwhite:#F2F3EE; --greengray:#E7E9E0;
+    --w85:rgba(255,255,255,.85); --w75:rgba(255,255,255,.75); --w60:rgba(255,255,255,.6);
+    --hairline-dark:rgba(255,255,255,.2); --hairline-light:rgba(64,70,65,.1);
+    --pad-x:clamp(24px, 4.44vw, 64px);
+    --sec-pad:clamp(64px, 8.33vw, 120px);
+    --sec-pad-md:clamp(60px, 7.64vw, 110px);
+    --sec-pad-sm:clamp(56px, 6.94vw, 100px);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:auto}
+  html,body{width:100%;min-height:100%}
+  body{font-family:'Lato',sans-serif;color:var(--ink);background:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{text-decoration:none;color:inherit}
+  button{font-family:inherit;border:none;background:none;cursor:pointer}
+  .serif{font-family:'Italiana',serif;font-weight:400}
+  .it{font-style:italic}
+  section{width:100%}
+  .eyebrow{font-size:12px;letter-spacing:2.4px;text-transform:uppercase;font-weight:400}
+  .mask{overflow:hidden}
+  .lucide{flex:none}
+
+  /* ============ NAV ============ */
+  .navbar{position:fixed;top:24px;left:var(--pad-x);right:var(--pad-x);z-index:100;
+    display:flex;justify-content:space-between;align-items:center;padding:12px 24px;border-radius:16px;
+    background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    box-shadow:0 8px 28px rgba(64,70,65,.08);transition:box-shadow .3s ease}
+  .navbar:hover{box-shadow:0 10px 15px -3px rgba(64,70,65,.08),0 4px 6px -2px rgba(64,70,65,.04)}
+  .nav-logo img{width:158px;height:42px;object-fit:contain;transition:transform .15s ease}
+  .nav-logo:hover img{transform:scale(1.02)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{font-size:15px;color:var(--ink);transition:color .15s ease}
+  .nav-links a:hover{color:var(--sage)}
+  .nav-right{display:flex;gap:20px;align-items:center}
+  .nav-phone{display:flex;gap:8px;align-items:center;font-size:15px;font-weight:600;color:var(--ink);transition:color .15s ease}
+  .nav-phone:hover{color:var(--sage)}
+  .nav-phone svg{color:var(--sage)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:8px;
+    font-weight:500;font-size:16px;padding:12px 24px;transition:background-color .3s ease,color .3s ease,transform .3s ease,box-shadow .3s ease,border-color .3s ease;will-change:transform}
+  .btn-primary{background:var(--sage);color:#fff}
+  .btn-primary:hover{background:var(--sage-hover);transform:translateY(-2px);box-shadow:0 6px 16px rgba(80,90,81,.35)}
+  .nav-burger{display:none;width:42px;height:42px;border-radius:8px;align-items:center;justify-content:center;color:var(--ink)}
+
+  /* mobile menu */
+  .mobile-menu{position:fixed;inset:0;z-index:200;background:var(--ink2);display:flex;flex-direction:column;
+    justify-content:center;padding:0 32px;gap:8px;visibility:hidden;opacity:0}
+  .mobile-menu a{font-family:'Italiana',serif;font-size:34px;color:#fff;padding:10px 0;border-bottom:1px solid var(--hairline-dark)}
+  .mobile-menu .mm-cta{margin-top:24px;border-bottom:none}
+  .mm-close{position:absolute;top:28px;right:28px;color:#fff;width:44px;height:44px}
+
+  /* ============ HERO ============ */
+  .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow:hidden}
+  .hero__media{position:absolute;inset:0;z-index:0}
+  .hero__media video,.hero__media img{width:100%;height:100%;object-fit:cover}
+  .hero__overlay{position:absolute;inset:0;z-index:1;
+    background:linear-gradient(45deg,rgba(57,46,38,.72) 0%,rgba(57,46,38,.42) 50%,rgba(64,70,65,.08) 100%)}
+  .hero__body{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;padding:140px var(--pad-x) 40px}
+  .hero__col{display:flex;flex-direction:column;gap:28px;max-width:720px}
+  .hero__eyebrow{display:flex;gap:10px;align-items:center;color:var(--w85)}
+  .hero__eyebrow .dash{width:28px;height:1px;background:var(--tan)}
+  .hero__h1{font-size:clamp(44px, 5.56vw, 80px);line-height:1.05;color:#fff;display:flex;flex-direction:column;gap:12px}
+  .hero__h1 .mask{padding-bottom:.14em;margin-bottom:-.04em}
+  .hero__h1 .it{color:var(--tan)}
+  .hero__sub{max-width:540px;font-size:18px;line-height:1.6;color:var(--w85)}
+  .offer-chip{display:inline-flex;gap:10px;align-items:center;align-self:flex-start;background:var(--tan);
+    border-radius:8px;padding:10px 18px;color:var(--brown);font-size:15px;font-weight:600}
+  .hero__ctas{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .btn-white{background:#fff;color:var(--sage);font-size:17px;font-weight:600;padding:16px 32px}
+  .btn-white:hover{background:#E7E9E0;transform:translateY(-2px);box-shadow:0 4px 6px -1px rgba(64,70,65,.08)}
+  .btn-ghost{border:1px solid rgba(255,255,255,.4);color:#fff;font-size:16px;padding:16px 28px}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .trust-strip{position:relative;z-index:2;display:flex;align-items:center;padding:22px var(--pad-x);
+    background:rgba(57,46,38,.4);border-top:1px solid rgba(255,255,255,.2)}
+  .trust-badge{flex:1;display:flex;gap:10px;align-items:center;justify-content:center;font-size:14px;font-weight:500;color:var(--w85)}
+  .trust-badge svg{color:var(--tan)}
+  .trust-div{width:1px;height:24px;background:rgba(255,255,255,.2);flex:none}
+
+  /* ============ QUIZ ============ */
+  .quiz{background:var(--cream);padding:var(--sec-pad-md) var(--pad-x);display:flex;flex-direction:column;align-items:center;gap:clamp(28px,3.33vw,48px)}
+  .quiz__header{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+  .quiz__header .eyebrow{color:var(--sage)}
+  .quiz__header h2{font-size:clamp(34px,3.61vw,52px);color:var(--ink)}
+  .quiz__header p{font-size:17px;line-height:1.5;color:rgba(64,70,65,.7)}
+  .quiz-card{width:100%;max-width:760px;background:var(--ink);border-radius:24px;padding:44px 48px;
+    display:flex;flex-direction:column;gap:32px}
+  .quiz-progress{display:flex;flex-direction:column;gap:12px}
+  .quiz-progress__labels{display:flex;justify-content:space-between;align-items:center}
+  .quiz-step{font-size:13px;font-weight:600;letter-spacing:1.5px;color:var(--tan);text-transform:uppercase}
+  .quiz-time{font-size:13px;color:rgba(255,255,255,.6)}
+  .quiz-track{width:100%;height:6px;border-radius:9999px;background:rgba(255,255,255,.15)}
+  .quiz-fill{height:6px;border-radius:9999px;background:var(--tan);width:25%;transition:width .5s cubic-bezier(.16,1,.3,1)}
+  .quiz-question{font-family:'Italiana',serif;font-size:clamp(25px,2.36vw,34px);line-height:1.25;color:#fff}
+  .quiz-answers{display:flex;gap:14px;flex-wrap:wrap}
+  .quiz-answer{flex:1;min-width:140px;display:flex;gap:8px;align-items:center;justify-content:center;
+    padding:16px 20px;border-radius:12px;background:var(--cream);border:2px solid var(--cream);
+    font-size:16px;font-weight:500;color:var(--ink);transition:background-color .25s ease,border-color .25s ease,color .25s ease,transform .15s ease}
+  .quiz-answer:hover{border-color:var(--tan)}
+  .quiz-answer.selected{background:var(--tan);border-color:var(--tan);color:var(--brown);font-weight:600}
+  .quiz-answer .ans-check{display:none;color:var(--brown)}
+  .quiz-answer.selected .ans-check{display:inline-flex}
+  .quiz-footer{display:flex;justify-content:space-between;align-items:center}
+  .quiz-back{display:flex;gap:8px;align-items:center;font-size:15px;font-weight:500;color:rgba(255,255,255,.6);transition:color .2s ease}
+  .quiz-back:hover{color:#fff}
+  .quiz-back[disabled]{opacity:.35;pointer-events:none}
+  .quiz-next{background:#fff;color:var(--sage);font-size:16px;font-weight:600;padding:13px 28px}
+  .quiz-next:hover{background:#E7E9E0;transform:translateY(-2px)}
+  .quiz-next[disabled]{opacity:.45;pointer-events:none}
+  .quiz-result{display:none;flex-direction:column;align-items:center;text-align:center;gap:22px;padding:14px 0}
+  .quiz-result__icon{width:72px;height:72px;border-radius:9999px;background:var(--tan);display:flex;align-items:center;justify-content:center;color:var(--brown)}
+  .quiz-result h3{font-family:'Italiana',serif;font-size:38px;line-height:1.2;color:#fff}
+  .quiz-result p{font-size:16px;line-height:1.65;color:var(--w75);max-width:520px}
+
+  /* ============ WHAT IS EXOMIND ============ */
+  .what{background:var(--ink);padding:var(--sec-pad) var(--pad-x);display:flex;flex-direction:column;gap:clamp(32px,3.89vw,56px)}
+  .sec-head{display:flex;flex-direction:column;gap:14px}
+  .sec-head .eyebrow{color:var(--tan)}
+  .sec-title{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;font-size:clamp(34px,3.89vw,56px);color:#fff}
+  .sec-title .it{color:var(--tan)}
+  .what__split{display:flex;gap:clamp(32px,4.44vw,64px);align-items:center}
+  .what__stats{width:250px;flex:none;display:flex;flex-direction:column}
+  .stat{display:flex;flex-direction:column;gap:8px;padding:28px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+  .stat:last-child{border-bottom:none}
+  .stat__value{font-family:'Italiana',serif;font-size:clamp(44px,5vw,72px);line-height:1;color:#fff}
+  .stat__label{font-size:14px;line-height:1.5;color:var(--tan)}
+  .what__copy{flex:1;display:flex;flex-direction:column;gap:24px}
+  .what__lead{font-size:19px;line-height:1.7;color:var(--w85)}
+  .what__body{font-size:16px;line-height:1.7;color:var(--w75)}
+  .fda-chip{display:inline-flex;gap:10px;align-items:center;align-self:flex-start;padding:14px 18px;
+    border:1px solid rgba(200,185,168,.4);border-radius:12px;color:var(--w85);font-size:15px;font-weight:600;
+    transition:background-color .3s ease,color .3s ease,border-color .3s ease,transform .3s ease,box-shadow .3s ease}
+  .fda-chip svg{color:var(--tan);transition:color .3s ease}
+  .fda-chip:hover{background:var(--tan);border-color:var(--tan);color:var(--brown);transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,.18)}
+  .fda-chip:hover svg{color:var(--brown)}
+  .what__arch{width:clamp(260px,27.8vw,400px);height:clamp(380px,38.9vw,560px);flex:none;border-radius:200px 200px 24px 24px;overflow:hidden;transform:translateZ(0)}
+  .what__arch img{width:100%;height:100%;object-fit:cover;will-change:transform}
+  @media (prefers-reduced-motion:reduce){.what__arch img{transform:none !important}}
+  .sci-note{font-size:12.5px;line-height:1.65;color:rgba(255,255,255,.5);border-top:1px solid rgba(255,255,255,.15);padding-top:24px}
+  .sci-note a{color:var(--tan);text-decoration:underline;text-underline-offset:2px;transition:color .15s ease}
+  .sci-note a:hover{color:#fff}
+
+  /* ============ CONDITIONS ============ */
+  .conditions{background:#fff;padding:var(--sec-pad-sm) var(--pad-x) var(--sec-pad);display:flex;flex-direction:column;gap:clamp(32px,3.89vw,56px)}
+  .cond-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px}
+  .cond-head .eyebrow{color:var(--sage)}
+  .cond-head .sec-title{font-size:clamp(32px,3.33vw,48px);color:var(--ink)}
+  .cond-head .sec-title .it{color:var(--ink)}
+  .cond-note{width:320px;flex:none;font-size:15px;line-height:1.55;color:rgba(64,70,65,.5)}
+  .cond-row{display:flex;gap:24px}
+  .cond-tile{flex:1;display:flex;flex-direction:column;gap:14px}
+  .cond-tile[data-offset="64"]{padding-top:64px}
+  .cond-tile[data-offset="16"]{padding-top:16px}
+  .cond-tile[data-offset="88"]{padding-top:88px}
+  .cond-tile[data-offset="32"]{padding-top:32px}
+  .cond-img{position:relative;border-radius:24px}
+  .cond-img .imgwrap{border-radius:24px;overflow:hidden;height:var(--h,320px)}
+  .cond-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+  .cond-tile:hover .cond-img img{transform:scale(1.08)}
+  .num-chip{position:absolute;top:-14px;left:-10px;width:56px;height:56px;border-radius:9999px;background:var(--cream);
+    display:flex;align-items:center;justify-content:center;font-family:'Italiana',serif;font-size:22px;color:var(--ink);
+    box-shadow:0 6px 16px rgba(64,70,65,.12);z-index:2}
+  .fda-pill{position:absolute;left:12px;bottom:12px;background:var(--tan);border-radius:9999px;padding:7px 14px;
+    font-size:11px;font-weight:600;letter-spacing:1.6px;color:var(--ink);z-index:2}
+  .cond-tile h3{font-family:'Italiana',serif;font-size:26px;font-weight:400;color:var(--ink)}
+  .cond-line{width:44px;height:2px;background:var(--sage)}
+  .cond-tile p{font-size:14px;line-height:1.5;color:rgba(64,70,65,.7)}
+
+  /* ============ SESSION ============ */
+  .session{background:var(--ink2);padding:var(--sec-pad) var(--pad-x);display:flex;flex-direction:column;gap:clamp(32px,3.89vw,56px)}
+  .session .sec-sub{font-size:16px;color:rgba(255,255,255,.6)}
+  .timeline{display:flex}
+  .tl-step{flex:1;border-right:1px solid rgba(255,255,255,.15);perspective:1100px;cursor:default}
+  .tl-step:last-child{border-right:none}
+  .tl-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;will-change:transform}
+  .tl-front,.tl-back{padding:24px 28px;border-radius:16px;display:flex;flex-direction:column;gap:16px;
+    backface-visibility:hidden;-webkit-backface-visibility:hidden}
+  .tl-front{position:relative}
+  .tl-back{position:absolute;inset:0;background:var(--tan);transform:rotateY(180deg);justify-content:center;gap:12px;overflow:hidden}
+  .tl-back .tl-back-num{font-family:'Italiana',serif;font-size:34px;line-height:1;color:var(--sage)}
+  .tl-back p{font-size:14.5px;line-height:1.6;color:var(--brown)}
+  .tl-top{display:flex;justify-content:space-between;align-items:center}
+  .tl-num{font-family:'Italiana',serif;font-size:44px;line-height:1;color:var(--tan)}
+  .tl-top svg{color:rgba(255,255,255,.6)}
+  .tl-step h3{font-size:17px;font-weight:600;line-height:1.35;color:#fff}
+  .tl-front p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.6)}
+  .claim-row{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;font-family:'Italiana',serif;font-size:clamp(28px,3.06vw,44px)}
+  .claim-row .a{color:#fff}
+  .claim-row .b{font-style:italic;color:var(--tan)}
+  .filmstrip{display:flex;gap:20px}
+  .filmstrip .film{flex:1;height:clamp(200px,20.8vw,300px);border-radius:16px;overflow:hidden}
+  .filmstrip img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+  .filmstrip .film:hover img{transform:scale(1.05)}
+
+  /* ============ REVIEWS ============ */
+  .reviews{background:#fff;padding:var(--sec-pad-md) var(--pad-x);display:flex;gap:clamp(40px,6.25vw,90px)}
+  .score-lockup{width:380px;flex:none;display:flex;flex-direction:column;gap:18px}
+  .score-lockup .eyebrow{color:var(--sage)}
+  .score-row{display:flex;gap:20px;align-items:flex-end}
+  .big-score{font-family:'Italiana',serif;font-size:clamp(60px,6.67vw,96px);line-height:1;color:var(--ink)}
+  .big-stars{display:flex;gap:4px;padding-bottom:18px;color:var(--sage);font-size:20px}
+  .google-row{display:flex;gap:10px;align-items:center}
+  .g-chip{width:28px;height:28px;border-radius:9999px;background:var(--offwhite);border:1px solid var(--hairline-light);
+    display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:var(--sage)}
+  .google-row span{font-size:15px;color:rgba(64,70,65,.7)}
+  .google-row:hover span{color:var(--sage-hover)}
+  .avatar-cluster{position:relative;height:56px;margin-top:4px}
+  .avatar-cluster .av{position:absolute;top:0;width:52px;height:52px;border-radius:9999px;outline:3px solid #fff;
+    display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;color:#fff}
+  .avatar-cluster .more{position:absolute;top:18px;left:180px;font-size:13px;color:rgba(64,70,65,.5);white-space:nowrap}
+  .review-rows{flex:1;display:flex;flex-direction:column}
+  .review{display:flex;gap:20px;padding:26px 22px;margin:0 -22px;border-top:1px solid var(--hairline-light);
+    border-radius:16px;transition:background-color .3s ease,transform .3s ease,box-shadow .3s ease}
+  .review:first-child{border-top:none}
+  .review:hover{background:var(--cream);transform:translateY(-4px);box-shadow:0 12px 24px rgba(64,70,65,.12);border-top-color:transparent}
+  .review .rev-av{width:48px;height:48px;flex:none;border-radius:9999px;background:var(--sage);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600}
+  .rev-col{flex:1;display:flex;flex-direction:column;gap:8px}
+  .rev-toprow{display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .rev-name{font-size:15px;font-weight:700;color:var(--ink)}
+  .rev-time{font-size:13px;color:rgba(64,70,65,.5)}
+  .rev-stars{display:flex;gap:3px;color:var(--sage);font-size:14px}
+  .rev-quote{font-size:15px;line-height:1.6;color:rgba(64,70,65,.7)}
+
+  /* ============ PATIENT STORIES ============ */
+  .stories{background:var(--ink2);padding:var(--sec-pad) var(--pad-x);display:flex;flex-direction:column;gap:clamp(28px,3.33vw,48px)}
+  .stories-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px}
+  .pull-quote{display:flex;flex-direction:column;gap:4px;align-items:flex-end;text-align:right}
+  .pull-quote .q{font-family:'Italiana',serif;font-style:italic;font-size:26px;color:var(--tan)}
+  .pull-quote .meta{font-size:13px;color:rgba(255,255,255,.5)}
+  .story{max-width:960px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+  .story-poster{position:relative;height:clamp(300px,37.5vw,540px);border-radius:16px;overflow:hidden;cursor:pointer;
+    display:flex;align-items:center;justify-content:center}
+  .story-poster img,.story-poster video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .story-poster::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(57,46,38,.6) 0%,rgba(57,46,38,0) 55%);pointer-events:none;transition:opacity .4s ease}
+  .story-poster.playing::after{opacity:0}
+  .story-play{position:relative;z-index:2;width:64px;height:64px;border-radius:9999px;background:rgba(245,239,231,.9);
+    display:flex;align-items:center;justify-content:center;color:var(--ink);transition:transform .3s ease}
+  .story-poster:hover .story-play{transform:scale(1.1)}
+  .story-caption{display:flex;justify-content:space-between;align-items:center}
+  .story-caption .name{font-family:'Italiana',serif;font-size:24px;color:#fff}
+  .story-caption .meta{font-size:13px;color:rgba(255,255,255,.6)}
+
+  /* ============ WHY ARISE ============ */
+  .why{background:var(--ink);padding:var(--sec-pad) var(--pad-x);display:flex;flex-direction:column;gap:clamp(28px,3.33vw,48px)}
+  .why__split{display:flex;gap:clamp(36px,5vw,72px);align-items:center}
+  .why__photo{position:relative;width:clamp(400px,38.9vw,560px);height:clamp(460px,43vw,620px);flex:none;border-radius:24px;overflow:hidden}
+  .why__photo img{width:100%;height:100%;object-fit:cover}
+  .photo-tag{position:absolute;left:0;bottom:0;background:rgba(57,46,38,.8);border-radius:0 16px 0 24px;
+    padding:12px 18px;font-size:13px;font-weight:600;color:var(--cream)}
+  .why__copy{flex:1;display:flex;flex-direction:column;gap:28px}
+  .why__copy .eyebrow{color:var(--tan)}
+  .why-h{font-size:clamp(34px,3.75vw,54px);line-height:1.1;color:#fff}
+  .why-h .it{color:var(--tan)}
+  .why__lead{font-size:17px;line-height:1.7;color:var(--w75)}
+  .why-list{display:flex;flex-direction:column}
+  .why-row{display:flex;gap:18px;padding:18px 20px;margin:0 -20px;border-bottom:1px solid rgba(255,255,255,.15);
+    border-radius:16px;transition:background-color .3s ease,transform .3s ease}
+  .why-row:last-child{border-bottom:none}
+  .why-row:hover{background:rgba(255,255,255,.07);transform:translateX(6px);border-bottom-color:transparent}
+  .why-row:hover .icon-ring{background:var(--tan);color:var(--brown);border-color:var(--tan)}
+  .icon-ring{transition:background-color .3s ease,color .3s ease,border-color .3s ease}
+  .icon-ring{width:44px;height:44px;flex:none;border-radius:9999px;border:1px solid rgba(200,185,168,.4);
+    display:flex;align-items:center;justify-content:center;color:var(--tan)}
+  .why-row h3{font-size:17px;font-weight:600;color:#fff;margin-bottom:6px}
+  .why-row p{font-size:15px;line-height:1.6;color:rgba(255,255,255,.6)}
+  .interior-strip{display:flex;gap:20px}
+  .interior-strip .shot{flex:1;height:clamp(150px,15.3vw,220px);border-radius:16px;overflow:hidden}
+  .interior-strip img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+  .interior-strip .shot:hover img{transform:scale(1.05)}
+
+  /* ============ OFFER / FORM ============ */
+  .consult{background:var(--ink);padding:var(--sec-pad-sm) var(--pad-x);display:flex;gap:clamp(40px,5.56vw,80px)}
+  .offer-left{flex:1;display:flex;flex-direction:column}
+  .offer-left .eyebrow{color:var(--w75)}
+  .offer-h2{padding-top:20px;font-size:clamp(32px,3.33vw,48px);line-height:1.12;color:#fff}
+  .offer-sub{padding:18px 60px 0 0;font-size:16px;line-height:1.6;color:var(--w75)}
+  .offer-list{margin-top:30px;padding-right:80px;display:flex;flex-direction:column}
+  .offer-pt{display:flex;gap:12px;align-items:center;padding:13px 16px;margin:0 -16px;border-top:1px solid rgba(255,255,255,.2);
+    font-size:15px;color:var(--w85);border-radius:12px;transition:background-color .3s ease,transform .3s ease,color .3s ease}
+  .offer-pt:first-child{border-top:none}
+  .offer-pt svg{color:var(--tan);transition:transform .3s ease}
+  .offer-pt:hover{background:rgba(255,255,255,.07);transform:translateX(6px);color:#fff;border-top-color:transparent}
+  .offer-pt:hover svg{transform:scale(1.2)}
+  .offer-phone{display:flex;gap:10px;align-items:center;padding-top:34px;font-size:15px;color:var(--w85)}
+  .offer-phone svg{color:var(--tan)}
+  .form-panel{width:clamp(420px,38.9vw,560px);flex:none;background:#fff;border-radius:16px;padding:clamp(24px,2.5vw,36px);align-self:flex-start}
+  .form-panel h3{font-family:'Italiana',serif;font-size:30px;font-weight:400;color:var(--ink)}
+  .form-sub{padding:8px 0 16px;font-size:13.5px;line-height:1.5;color:rgba(64,70,65,.7)}
+  .deal-banner{display:flex;gap:12px;align-items:center;background:var(--tan);border-radius:10px;
+    padding:12px 16px;margin-bottom:20px;font-size:14px;line-height:1.5;color:var(--brown)}
+  .deal-banner svg{flex:none;color:var(--brown)}
+  .deal-banner strong{font-weight:700}
+  .form-row{display:flex;gap:14px;margin-bottom:16px}
+  .field{flex:1;display:flex;flex-direction:column;gap:7px}
+  .field label{font-size:12px;font-weight:600;letter-spacing:.8px;color:var(--ink)}
+  .field .control{position:relative}
+  .field input,.field select{width:100%;height:46px;border-radius:8px;border:1px solid rgba(64,70,65,.2);
+    padding:0 14px;font-family:'Lato',sans-serif;font-size:14px;color:var(--ink);background:#fff;
+    appearance:none;-webkit-appearance:none;outline:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .field input::placeholder{color:rgba(64,70,65,.4)}
+  .field select:invalid{color:rgba(64,70,65,.4)}
+  .field input:focus,.field select:focus{border-color:var(--sage);box-shadow:0 0 0 3px rgba(80,90,81,.15)}
+  .field .control svg{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:rgba(64,70,65,.5);pointer-events:none}
+  .form-submit{width:100%;height:50px;margin-top:6px;background:var(--sage);color:#fff;font-size:16px;font-weight:500;border-radius:8px}
+  .form-submit:hover{background:var(--sage-hover)}
+  .consent{padding-top:16px;font-size:11.5px;line-height:1.55;color:rgba(64,70,65,.5)}
+  .form-success{display:none;flex-direction:column;align-items:center;gap:16px;text-align:center;padding:40px 0}
+  .form-success .quiz-result__icon{background:var(--sage);color:#fff}
+  .form-success h4{font-family:'Italiana',serif;font-size:28px;font-weight:400;color:var(--ink)}
+  .form-success p{font-size:15px;line-height:1.6;color:rgba(64,70,65,.7)}
+
+  /* ============ CONTACT ============ */
+  .contact{background:var(--ink);padding:var(--sec-pad) var(--pad-x);display:flex;flex-direction:column;gap:clamp(28px,3.33vw,48px)}
+  .contact__split{display:flex;gap:clamp(32px,4.44vw,64px)}
+  .contact-info{flex:1;display:flex;flex-direction:column}
+  .info-row{display:flex;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+  .info-row .lbl{font-size:12px;letter-spacing:1.5px;color:rgba(255,255,255,.5);margin-bottom:4px}
+  .info-row .val{font-size:18px;font-weight:600;color:#fff}
+  .info-row.hours-info{align-items:flex-start;border-bottom:none}
+  .info-row.hours-info .lbl{margin-bottom:12px}
+  .hours-rows{display:flex;flex-direction:column;gap:10px;max-width:360px}
+  .hours-row{display:flex;justify-content:space-between;gap:24px;font-size:15px}
+  .hours-row .d{color:rgba(255,255,255,.7)}
+  .hours-row .t{font-weight:600;color:#fff}
+  .hours-row .t.closed{font-weight:400;color:rgba(255,255,255,.4)}
+  .map-panel{position:relative;width:60vw;height:clamp(380px,38.9vw,560px);flex:none;border-radius:16px;overflow:hidden;background:#525854}
+  .map-panel iframe{width:100%;height:100%;border:0;display:block;filter:saturate(.85)}
+  .map-overlay{position:absolute;left:16px;right:16px;bottom:16px;display:flex;justify-content:space-between;
+    align-items:center;gap:16px;background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    border-radius:12px;padding:14px 18px;box-shadow:0 8px 28px rgba(64,70,65,.18)}
+  .map-overlay .addr1{font-family:'Italiana',serif;font-size:19px;color:var(--ink)}
+  .map-overlay .addr2{font-size:12.5px;color:rgba(64,70,65,.7)}
+  .btn-directions{background:var(--sage);color:#fff;font-size:15px;font-weight:600;padding:12px 20px;flex:none}
+  .btn-directions:hover{background:var(--sage-hover);transform:translateY(-2px)}
+
+  /* ============ FAQ ============ */
+  .faq{background:var(--offwhite);padding:var(--sec-pad-md) clamp(24px,12.5vw,180px);display:flex;flex-direction:column;gap:clamp(28px,3.06vw,44px)}
+  .faq .eyebrow{color:var(--sage)}
+  .faq .sec-title{font-size:clamp(30px,3.19vw,46px);color:var(--ink)}
+  .faq .sec-title .it{color:var(--sage)}
+  .faq-list{display:flex;flex-direction:column}
+  .faq-item{border-bottom:1px solid var(--hairline-light)}
+  .faq-item:last-child{border-bottom:none}
+  .faq-q{width:100%;display:flex;gap:20px;align-items:center;padding:26px 0;text-align:left}
+  .faq-num{font-family:'Italiana',serif;font-size:22px;color:rgba(64,70,65,.5)}
+  .faq-qtext{flex:1;font-size:17px;font-weight:600;color:var(--ink)}
+  .faq-chev{color:rgba(64,70,65,.5);transition:transform .3s ease,color .3s ease}
+  .faq-item.open .faq-chev{transform:rotate(180deg);color:var(--sage)}
+  .faq-a{overflow:hidden;height:0}
+  .faq-a-inner{padding:0 44px 26px 42px;font-size:15px;line-height:1.65;color:rgba(64,70,65,.7)}
+
+  /* ============ FOOTER ============ */
+  footer{background:var(--ink);padding:clamp(48px,5.56vw,80px) var(--pad-x) clamp(28px,2.78vw,40px);display:flex;flex-direction:column;gap:clamp(32px,3.33vw,48px)}
+  .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;align-items:start}
+  .f-brand{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+  .f-logo img{width:170px;height:auto;object-fit:contain;transition:filter .3s ease}
+  .f-logo:hover img{filter:drop-shadow(0 0 14px rgba(200,185,168,.75))}
+  .btl-row img{transition:filter .3s ease}
+  .btl-row:hover img{filter:drop-shadow(0 0 12px rgba(211,219,221,.8))}
+  .f-blurb{max-width:300px;font-size:15px;line-height:1.6;color:var(--w75)}
+  .f-social{display:flex;gap:12px}
+  .f-social a{width:40px;height:40px;border-radius:9999px;border:1px solid rgba(255,255,255,.2);
+    display:flex;align-items:center;justify-content:center;color:var(--w85);font-size:18px;transition:transform .15s ease,border-color .15s ease}
+  .f-social a:hover{transform:translateY(-2px);border-color:var(--tan)}
+  .btl-row{display:flex;gap:10px;align-items:center;font-size:12px;color:rgba(255,255,255,.6)}
+  .btl-row img{width:64px;height:22px;object-fit:contain}
+  .f-col{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+  .f-title{font-size:12px;letter-spacing:2.4px;color:rgba(255,255,255,.6);line-height:1;padding:4px 0 6px}
+  .f-col a{font-size:15px;color:var(--w85);transition:color .15s ease,transform .15s ease;display:inline-block}
+  .f-col a:hover{color:#fff;transform:translateX(4px)}
+  .f-hrow{width:100%;max-width:300px;font-size:15px;line-height:1.5}
+  .f-crow{display:flex;gap:10px;font-size:15px;line-height:1.5;color:var(--w85)}
+  .f-crow svg{color:var(--tan);margin-top:3px}
+  .f-hrow{display:flex;justify-content:space-between}
+  .f-hrow .d{color:rgba(255,255,255,.6)}
+  .f-hrow .t{color:var(--w85)}
+  .footer-hairline{width:100%;height:1px;background:rgba(255,255,255,.2)}
+  .footer-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.6)}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:1024px){
+    .nav-links,.nav-phone{display:none}
+    .nav-burger{display:flex}
+    .what__split{flex-wrap:wrap}
+    .what__stats{width:100%;flex-direction:row;gap:32px}
+    .stat{flex:1;border-bottom:none;border-right:1px solid rgba(255,255,255,.2);padding:8px 24px 8px 0}
+    .stat:last-child{border-right:none}
+    .stat__value{font-size:clamp(40px,5.5vw,56px)}
+    .what__arch{width:100%;height:44vw;max-height:480px;border-radius:24px}
+    .cond-row{flex-wrap:wrap}
+    .cond-tile{flex:1 1 calc(33% - 24px)}
+    .cond-tile[data-offset]{padding-top:0}
+    .timeline{flex-wrap:wrap}
+    .tl-step{flex:1 1 calc(50% - 28px);border-right:none;border-bottom:1px solid rgba(255,255,255,.15)}
+    .reviews{flex-direction:column}
+    .score-lockup{width:100%}
+    .why__split{flex-direction:column;align-items:stretch}
+    .why__photo{width:100%;height:64vw;max-height:600px}
+    .why__photo img{object-position:top}
+    .consult{flex-direction:column}
+    .form-panel{width:100%}
+    .offer-sub,.offer-list{padding-right:0}
+    .contact__split{flex-direction:column}
+    .map-panel{width:100%}
+    .stories-head{flex-direction:column;align-items:flex-start;gap:20px}
+    .pull-quote{align-items:flex-start;text-align:left}
+    .footer-top{grid-template-columns:1fr 1fr;row-gap:40px}
+    .f-brand{grid-column:1/-1}
+    .faq{padding:90px var(--pad-x)}
+  }
+  @media (max-width:768px){
+    .navbar{top:12px;left:12px;right:12px;padding:10px 16px}
+    .hero__body{padding-top:16vh}
+    .hero__h1{font-size:clamp(40px,11vw,56px);gap:8px}
+    .hero__sub{font-size:16px}
+    .trust-strip{flex-wrap:wrap;gap:14px;justify-content:flex-start}
+    .trust-badge{flex:1 1 40%;justify-content:flex-start}
+    .trust-div{display:none}
+    .quiz-card{padding:7.5vw 6vw}
+    .quiz-answers{flex-direction:column}
+    .quiz-answer{width:100%}
+    .sec-title{gap:10px}
+    .cond-head{flex-direction:column;align-items:flex-start}
+    .cond-note{width:100%}
+    .cond-tile{flex:1 1 100%}
+    .cond-img .imgwrap{height:64vw !important;max-height:320px !important}
+    .tl-step{flex:1 1 100%}
+    .tl-front,.tl-back{padding:5vw 4vw}
+    .filmstrip{flex-direction:column}
+    .filmstrip .film{height:56vw}
+    .what__arch{width:100%;height:100vw;max-height:480px}
+    .why__photo{width:100%;height:100vw;max-height:480px}
+    .why__photo img{object-position:top}
+    .interior-strip{flex-wrap:wrap}
+    .interior-strip .shot{flex:1 1 calc(50% - 20px);height:36vw}
+    .form-row{flex-direction:column;gap:16px}
+    .story-poster{height:56vw}
+    .map-panel{height:80vw;max-height:440px}
+    .map-overlay{flex-direction:column;align-items:flex-start}
+    .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+    .f-brand{grid-column:1/-1}
+    .footer-bottom{flex-direction:column}
+  }
+
+  /* ============ TOUCH (tap = hover; class added by JS on touch devices only) ============ */
+  .review.tap-active{background:var(--cream);transform:translateY(-4px);box-shadow:0 12px 24px rgba(64,70,65,.12);border-top-color:transparent}
+  .why-row.tap-active{background:rgba(255,255,255,.07);transform:translateX(6px);border-bottom-color:transparent}
+  .why-row.tap-active .icon-ring{background:var(--tan);color:var(--brown);border-color:var(--tan)}
+  .offer-pt.tap-active{background:rgba(255,255,255,.07);transform:translateX(6px);color:#fff;border-top-color:transparent}
+  .offer-pt.tap-active svg{transform:scale(1.2)}
+  .fda-chip.tap-active{background:var(--tan);border-color:var(--tan);color:var(--brown);transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,.18)}
+  .fda-chip.tap-active svg{color:var(--brown)}
+  .cond-tile.tap-active .cond-img img{transform:scale(1.08)}
+  .film.tap-active img{transform:scale(1.05)}
+  .shot.tap-active img{transform:scale(1.05)}
+  .f-logo.tap-active img{filter:drop-shadow(0 0 14px rgba(200,185,168,.75))}
+  .btl-row.tap-active img{filter:drop-shadow(0 0 12px rgba(211,219,221,.8))}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none !important;transition:none !important}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="navbar" id="navbar">
+  <a class="nav-logo" href="#top" aria-label="Arise Integrative Wellness">
+    <img src="images/arise_logo_flat.png" alt="Arise Integrative Wellness">
+  </a>
+  <div class="nav-links">
+    <a href="#what">What is Exomind</a>
+    <a href="#conditions">Conditions</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <a class="nav-phone" href="tel:+19416234836"><i data-lucide="phone" style="width:16px;height:16px"></i>(941) 623-4836</a>
+    <a class="btn btn-primary" href="#consult">Book Now</a>
+    <button class="nav-burger" id="burger" aria-label="Open menu"><i data-lucide="menu"></i></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mm-close" id="mmClose" aria-label="Close menu"><i data-lucide="x" style="width:30px;height:30px"></i></button>
+  <a href="#what">What is Exomind</a>
+  <a href="#conditions">Conditions</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a class="mm-cta" href="#consult"><span class="btn btn-primary" style="font-size:18px">Book Now</span></a>
+</div>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="hero__media">
+    <video autoplay muted loop playsinline poster="images/exomind_arise_1_f680ca9e08_ZXFlw6.webp">
+      <source src="images/Korman_Hero_Banner_Exomind_720_V1_ef775fdfc5.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero__overlay"></div>
+  <div class="hero__body">
+    <div class="hero__col">
+      <div class="mask"><div class="hero__eyebrow hero__info-item">
+        <span class="dash"></span>
+        <span class="eyebrow">TMS Therapy (Exomind) · Port Charlotte, FL</span>
+      </div></div>
+      <h1 class="hero__h1 serif">
+        <span class="mask" style="display:block"><span class="hero__title-line" style="display:block">Feel like yourself again,</span></span>
+        <span class="mask" style="display:block"><span class="hero__title-line" style="display:block">in <em class="it">six sessions</em></span></span>
+      </h1>
+      <div class="mask"><p class="hero__sub hero__info-item">FDA-cleared Exomind TMS uses focused magnetic pulses to restore healthy brain activity - no medication, no downtime.</p></div>
+      <div class="mask"><div class="hero__info-item" style="display:flex">
+        <span class="offer-chip"><i data-lucide="badge-percent" style="width:18px;height:18px"></i>20% off your Exomind treatment plan this month</span>
+      </div></div>
+      <div class="mask"><div class="hero__ctas hero__info-item">
+        <a class="btn btn-white" href="#what">Discover Exomind<i data-lucide="arrow-right" style="width:18px;height:18px"></i></a>
+        <a class="btn btn-ghost" href="#quiz">Take the 60-second quiz</a>
+      </div></div>
+    </div>
+  </div>
+  <div class="trust-strip hero__bottom">
+    <div class="trust-badge"><i data-lucide="shield-check" style="width:18px;height:18px"></i>FDA cleared</div>
+    <div class="trust-div"></div>
+    <div class="trust-badge"><i data-lucide="award" style="width:18px;height:18px"></i>Board-certified</div>
+    <div class="trust-div"></div>
+    <div class="trust-badge"><i data-lucide="stethoscope" style="width:18px;height:18px"></i>Physician-led</div>
+    <div class="trust-div"></div>
+    <div class="trust-badge"><i data-lucide="star" style="width:18px;height:18px"></i>5.0 on Google</div>
+    <div class="trust-div"></div>
+    <div class="trust-badge"><i data-lucide="map-pin" style="width:18px;height:18px"></i>Port Charlotte, FL</div>
+  </div>
+</header>
+
+<!-- ================= QUIZ ================= -->
+<section class="quiz" id="quiz">
+  <div class="quiz__header">
+    <div class="mask section-tag-wrap"><span class="eyebrow">Candidate Assessment</span></div>
+    <div class="mask section-title-wrap"><h2 class="serif">Is Exomind right for you?</h2></div>
+    <p data-animate="fade-up" data-delay="0.2">Four questions. Sixty seconds. A clear answer.</p>
+  </div>
+  <div class="quiz-card" data-animate="fade-up" id="quizCard">
+    <div class="quiz-main" id="quizMain">
+      <div class="quiz-progress" style="margin-bottom:32px">
+        <div class="quiz-progress__labels">
+          <span class="quiz-step" id="quizStep">Question 1 of 4</span>
+          <span class="quiz-time">~60 seconds · No obligation</span>
+        </div>
+        <div class="quiz-track"><div class="quiz-fill" id="quizFill"></div></div>
+      </div>
+      <div id="quizQA">
+        <h3 class="quiz-question" id="quizQuestion" style="margin-bottom:32px"></h3>
+        <div class="quiz-answers" id="quizAnswers" style="margin-bottom:32px"></div>
+      </div>
+      <div class="quiz-footer">
+        <button class="quiz-back" id="quizBack" disabled><i data-lucide="arrow-left" style="width:16px;height:16px"></i>Back</button>
+        <button class="btn quiz-next" id="quizNext" disabled>Next question<i data-lucide="arrow-right" style="width:16px;height:16px"></i></button>
+      </div>
+    </div>
+    <div class="quiz-result" id="quizResult">
+      <span class="quiz-result__icon"><i data-lucide="check" style="width:32px;height:32px"></i></span>
+      <h3>Good news - you look like a<br><em class="it" style="color:var(--tan)">strong candidate</em> for Exomind.</h3>
+      <p>Based on your answers, Exomind could be a great fit for your goals. Book your free consultation and our clinical team will confirm your candidacy, map your protocol and answer every question - no obligation.</p>
+      <a class="btn btn-white" href="#consult" style="margin-top:4px">Request my consultation<i data-lucide="arrow-right" style="width:18px;height:18px"></i></a>
+      <span style="font-size:13px;color:rgba(255,255,255,.6)">Or call us directly at (941) 623-4836</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT IS EXOMIND ================= -->
+<section class="what" id="what">
+  <div class="sec-head">
+    <div class="mask section-tag-wrap"><span class="eyebrow">The Science</span></div>
+    <div class="mask section-title-wrap"><h2 class="sec-title serif"><span>What is Exomind?</span><em class="it">A workout for the mind.</em></h2></div>
+  </div>
+  <div class="what__split">
+    <div class="what__stats" data-animate="stagger">
+      <div class="stat"><span class="stat__value" data-count="90" data-suffix="%">0%</span><span class="stat__label">rate sessions comfortable or very comfortable</span></div>
+      <div class="stat"><span class="stat__value" data-count="0.2" data-decimals="1" data-suffix="/10">0.0/10</span><span class="stat__label">average pain score reported</span></div>
+      <div class="stat"><span class="stat__value" data-count="80" data-suffix="%">0%</span><span class="stat__label">improved well-being at 3 months</span></div>
+    </div>
+    <div class="what__copy" data-animate="fade-up" data-delay="0.15">
+      <p class="what__lead">Exomind delivers focused magnetic pulses to the dorsolateral prefrontal cortex - the region that regulates mood, focus and impulse control - using BTL's patented ExoTMS waveform.</p>
+      <p class="what__body">Each painless pulse stimulates underactive neural circuits and harnesses neuroplasticity - your brain's natural ability to rewire itself. Session after session, healthy activity patterns are strengthened, like a workout for the mind.</p>
+      <p class="what__body">The technology is FDA-cleared for depression, fully non-invasive, and requires no medication, no anesthesia, and no recovery time.</p>
+      <span class="fda-chip"><i data-lucide="shield-check" style="width:20px;height:20px"></i>FDA-cleared · Powered by BTL ExoTMS technology</span>
+    </div>
+    <div class="what__arch" data-animate="fade-in" id="pxHolder">
+      <img src="images/device8.jpg" alt="Exomind TMS device at Arise Integrative Wellness" loading="lazy" id="pxImg">
+    </div>
+  </div>
+  <p class="sci-note" data-animate="fade-in">*In a peer-reviewed clinical study of ExoTMS - the technology inside EXOMIND - 90.9% of participants rated treatment comfortable (average discomfort 0.2 out of 10), and over 80% reported improved mood and mental well-being at three months. Published in the Journal of Psychiatry and Psychiatric Disorders; results based on BTL clinical data. <a href="https://www.thepmfajournal.com/industry-news/post/btl-exomind-publishes-a-new-clinical-paper" target="_blank" rel="noopener">Read the clinical paper</a> · <a href="https://clinicaltrials.gov/study/NCT06899646" target="_blank" rel="noopener">Study NCT06899646</a>. Individual results may vary.</p>
+</section>
+
+<!-- ================= CONDITIONS ================= -->
+<section class="conditions" id="conditions">
+  <div class="cond-head">
+    <div class="sec-head">
+      <div class="mask section-tag-wrap"><span class="eyebrow">Conditions We Treat</span></div>
+      <div class="mask section-title-wrap"><h2 class="sec-title serif" style="color:var(--ink)"><span>Five ways Exomind</span><em class="it">can help.</em></h2></div>
+    </div>
+    <p class="cond-note" data-animate="fade-up">One protocol, five evidence-backed applications - mapped to your goals during your consultation.</p>
+  </div>
+  <div class="cond-row" data-card-stagger>
+    <div class="cond-tile">
+      <div class="cond-img" style="--h:320px">
+        <div class="imgwrap" style="height:clamp(220px,22.2vw,320px)"><img src="images/condition-depression.jpg" alt="Depression treatment" loading="lazy"></div>
+        <span class="num-chip">01</span>
+        <span class="fda-pill">FDA-CLEARED</span>
+      </div>
+      <h3>Depression</h3><span class="cond-line"></span>
+      <p>Reactivates underactive prefrontal circuits to restore mood and motivation.</p>
+    </div>
+    <div class="cond-tile" data-offset="64">
+      <div class="cond-img">
+        <div class="imgwrap" style="height:clamp(170px,16.7vw,240px)"><img src="images/condition-anxiety.jpg" alt="Anxiety treatment" loading="lazy"></div>
+        <span class="num-chip">02</span>
+      </div>
+      <h3>Anxiety</h3><span class="cond-line"></span>
+      <p>Calms overactive stress loops for a steadier, quieter mind.</p>
+    </div>
+    <div class="cond-tile" data-offset="16">
+      <div class="cond-img">
+        <div class="imgwrap" style="height:clamp(195px,19.4vw,280px)"><img src="images/condition-ocd.jpg" alt="OCD treatment" loading="lazy"></div>
+        <span class="num-chip">03</span>
+      </div>
+      <h3>OCD</h3><span class="cond-line"></span>
+      <p>Helps interrupt intrusive thought-compulsion cycles.</p>
+    </div>
+    <div class="cond-tile" data-offset="88">
+      <div class="cond-img">
+        <div class="imgwrap" style="height:clamp(160px,16vw,230px)"><img src="images/condition-brain-fog.jpg" alt="Brain fog treatment" loading="lazy"></div>
+        <span class="num-chip">04</span>
+      </div>
+      <h3>Brain Fog</h3><span class="cond-line"></span>
+      <p>Sharpens focus, memory and mental clarity.</p>
+    </div>
+    <div class="cond-tile" data-offset="32">
+      <div class="cond-img">
+        <div class="imgwrap" style="height:clamp(190px,18.75vw,270px)"><img src="images/condition-binge-eating.jpg" alt="Binge eating treatment" loading="lazy"></div>
+        <span class="num-chip">05</span>
+      </div>
+      <h3>Binge Eating</h3><span class="cond-line"></span>
+      <p>Strengthens impulse control around food and cravings.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SESSION ================= -->
+<section class="session" id="session">
+  <div class="sec-head">
+    <div class="mask section-tag-wrap"><span class="eyebrow">Your Session</span></div>
+    <div class="mask section-title-wrap"><h2 class="sec-title serif"><span>What a session</span><em class="it">looks like</em></h2></div>
+    <p class="sec-sub" data-animate="fade-up" data-delay="0.25">Six sessions over about three weeks. Fully awake, no anesthesia, back to work the same day.</p>
+  </div>
+  <div class="timeline" data-animate="stagger">
+    <div class="tl-step">
+      <div class="tl-inner">
+        <div class="tl-front">
+          <div class="tl-top"><span class="tl-num">01</span><i data-lucide="clipboard-list" style="width:24px;height:24px"></i></div>
+          <h3>Consultation &amp; mapping</h3>
+          <p>We map your treatment target and tailor your protocol.</p>
+        </div>
+        <div class="tl-back">
+          <span class="tl-back-num">01</span>
+          <p>Your first visit includes a full history review and precise mapping of your treatment target - about 45 minutes, no referral needed.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tl-step">
+      <div class="tl-inner">
+        <div class="tl-front">
+          <div class="tl-top"><span class="tl-num">02</span><i data-lucide="armchair" style="width:24px;height:24px"></i></div>
+          <h3>Relax in the chair</h3>
+          <p>Settle in while the coil is positioned precisely over the DLPFC.</p>
+        </div>
+        <div class="tl-back">
+          <span class="tl-back-num">02</span>
+          <p>No prep needed. Sit back in a comfortable chair, fully awake and dressed - the coil rests gently against your head.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tl-step">
+      <div class="tl-inner">
+        <div class="tl-front">
+          <div class="tl-top"><span class="tl-num">03</span><i data-lucide="activity" style="width:24px;height:24px"></i></div>
+          <h3>20–30 min of gentle pulses</h3>
+          <p>A light tapping sensation - most patients read or simply rest.</p>
+        </div>
+        <div class="tl-back">
+          <span class="tl-back-num">03</span>
+          <p>Average discomfort is just 0.2 out of 10. Read, listen to music or simply rest while the pulses do the work.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tl-step">
+      <div class="tl-inner">
+        <div class="tl-front">
+          <div class="tl-top"><span class="tl-num">04</span><i data-lucide="car" style="width:24px;height:24px"></i></div>
+          <h3>Walk out, drive home</h3>
+          <p>No downtime, no recovery. Back to your day immediately.</p>
+        </div>
+        <div class="tl-back">
+          <span class="tl-back-num">04</span>
+          <p>No anesthesia, no sedation - drive yourself home and go straight back to work, errands or the beach.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="claim-row" data-animate="fade-up">
+    <span class="a">Under 30 minutes.</span><span class="b">Drive yourself home.</span>
+  </div>
+  <div class="filmstrip" data-card-stagger>
+    <div class="film"><img src="images/exomind_arise_2_c7e81f2309.webp" alt="Exomind session at Arise" loading="lazy"></div>
+    <div class="film"><img src="images/exomind_arise_4_4601c94d0d_20vfdg.webp" alt="Patient during Exomind treatment" loading="lazy"></div>
+    <div class="film"><img src="images/exomind_arise_5_8bf76bf2b7_ZDc0Ly.webp" alt="Exomind coil positioning" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section class="reviews" id="reviews">
+  <div class="score-lockup">
+    <div class="mask section-tag-wrap"><span class="eyebrow">Patient Experiences</span></div>
+    <div class="mask section-title-wrap"><div class="score-row">
+      <span class="big-score">5.0</span>
+      <span class="big-stars">
+        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+      </span>
+    </div></div>
+    <a class="google-row" href="https://maps.app.goo.gl/jpK2iv5yNicZ2pBa8" target="_blank" rel="noopener">
+      <span class="g-chip">G</span><span>Google rating · 112 reviews</span>
+    </a>
+    <div class="avatar-cluster" data-animate="fade-in" data-delay="0.3">
+      <span class="av" style="left:0;background:var(--sage)">RP</span>
+      <span class="av" style="left:38px;background:var(--tan);color:var(--ink)">RR</span>
+      <span class="av" style="left:76px;background:var(--ink)">TS</span>
+      <span class="av" style="left:114px;background:var(--sage-light)">TB</span>
+      <span class="more">+ 108 more</span>
+    </div>
+  </div>
+  <div class="review-rows" data-animate="stagger">
+    <div class="review">
+      <span class="rev-av">RP</span>
+      <div class="rev-col">
+        <div class="rev-toprow"><span class="rev-name">Renee Peters</span><span class="rev-time">3 months ago</span></div>
+        <div class="rev-stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+        <p class="rev-quote">"Everyone there is not only welcoming, but very knowledgeable and professional. I'm looking forward to my next few visits (already scheduled), and can't wait to see what will come after."</p>
+      </div>
+    </div>
+    <div class="review">
+      <span class="rev-av" style="background:var(--tan);color:var(--ink)">RR</span>
+      <div class="rev-col">
+        <div class="rev-toprow"><span class="rev-name">Robert Roemhild</span><span class="rev-time">4 months ago</span></div>
+        <div class="rev-stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+        <p class="rev-quote">"They were all so helpful, concerned and understanding of my situation and severity of pain. Absolutely flawless service overall!! I feel so comfortable and hopeful working with this group. Please keep up the great work!"</p>
+      </div>
+    </div>
+    <div class="review">
+      <span class="rev-av" style="background:var(--ink)">TS</span>
+      <div class="rev-col">
+        <div class="rev-toprow"><span class="rev-name">Tabitha Smith</span><span class="rev-time">2 months ago</span></div>
+        <div class="rev-stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+        <p class="rev-quote">"Dr. Kauffman was wonderful. We are so happy we found someone so caring and compassionate. I am looking forward to my next visit with her next week."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PATIENT STORIES ================= -->
+<section class="stories" id="stories">
+  <div class="stories-head">
+    <div class="sec-head">
+      <div class="mask section-tag-wrap"><span class="eyebrow">Patient Stories</span></div>
+      <div class="mask section-title-wrap"><h2 class="sec-title serif">In their own words</h2></div>
+    </div>
+    <div class="pull-quote" data-animate="fade-up" data-delay="0.2">
+      <span class="q serif">"Exomind brought my joy back."</span>
+    </div>
+  </div>
+  <div class="story" data-animate="fade-up">
+    <div class="story-poster" id="storyPoster">
+      <img src="images/exomind_arise_5_8bf76bf2b7_ZDc0Ly.webp" alt="Patient testimonial video">
+      <span class="story-play"><i data-lucide="play" style="width:24px;height:24px"></i></span>
+    </div>
+    <div class="story-caption" style="justify-content:flex-end">
+      <span class="meta">Depression · 6 sessions</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY ARISE ================= -->
+<section class="why" id="why">
+  <div class="why__split">
+    <div class="why__photo" data-animate="scale-up">
+      <img src="images/Dr_Korman_Dr_Kauffman_7c5379a2b1_ZgLhKy.webp" alt="Dr. Laura Korman and Dr. Kristin Kauffman" loading="lazy">
+      <span class="photo-tag">Dr. Laura Korman &amp; Dr. Kristin Kauffman</span>
+    </div>
+    <div class="why__copy">
+      <div class="mask section-tag-wrap"><span class="eyebrow">Why Arise Integrative Wellness</span></div>
+      <div class="mask section-title-wrap"><h2 class="why-h serif">Brain science,<br><em class="it">delivered with warmth</em></h2></div>
+      <p class="why__lead" data-animate="fade-up">For over 35 years, our physician-led team has served Southwest Florida with an integrative, whole-person approach - pairing Exomind TMS with functional medicine in a calm, spa-like setting.</p>
+      <div class="why-list" data-animate="stagger">
+        <div class="why-row">
+          <span class="icon-ring"><i data-lucide="stethoscope" style="width:20px;height:20px"></i></span>
+          <div><h3>Physician-led care</h3><p>Every protocol is overseen by doctors with deep functional-neurology expertise.</p></div>
+        </div>
+        <div class="why-row">
+          <span class="icon-ring"><i data-lucide="leaf" style="width:20px;height:20px"></i></span>
+          <div><h3>Integrative whole-person approach</h3><p>Exomind is paired with nutrition and functional medicine - not prescribed in isolation.</p></div>
+        </div>
+        <div class="why-row">
+          <span class="icon-ring"><i data-lucide="sliders-horizontal" style="width:20px;height:20px"></i></span>
+          <div><h3>Personalized protocols</h3><p>Your mapping, intensity and cadence are tailored to your brain, not a template.</p></div>
+        </div>
+        <div class="why-row">
+          <span class="icon-ring"><i data-lucide="armchair" style="width:20px;height:20px"></i></span>
+          <div><h3>A calm, spa-like clinic</h3><p>Treatment feels less like a hospital visit and more like a restorative ritual.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="interior-strip" data-card-stagger>
+    <div class="shot"><img src="images/interior.webp" alt="Arise clinic interior" loading="lazy"></div>
+    <div class="shot"><img src="images/about_us_proudly_serving_arise_8008bfc84e_Z1HH9eh.webp" alt="Arise treatment room" loading="lazy"></div>
+    <div class="shot"><img src="images/exterior2.jpg" alt="Arise Integrative Wellness building" loading="lazy"></div>
+    <div class="shot"><img src="images/the_staff_3efa37a1ba.webp" alt="The Arise team" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- ================= OFFER / FORM ================= -->
+<section class="consult" id="consult">
+  <div class="offer-left">
+    <div class="mask section-tag-wrap"><span class="eyebrow">Request a Consultation · Limited This Month</span></div>
+    <div class="mask section-title-wrap"><h2 class="offer-h2 serif">20% off Exomind<br><em class="it">treatment plans.</em></h2></div>
+    <p class="offer-sub" data-animate="fade-up">Fill out the form on this page to lock in 20% off your complete Exomind treatment plan. We'll confirm you're a candidate, map your protocol and answer every question - no obligation.</p>
+    <div class="offer-list" data-animate="stagger">
+      <div class="offer-pt"><i data-lucide="check" style="width:16px;height:16px"></i>Free 15-minute consultation with our clinical team</div>
+      <div class="offer-pt"><i data-lucide="check" style="width:16px;height:16px"></i>No referral needed to get started</div>
+      <div class="offer-pt"><i data-lucide="check" style="width:16px;height:16px"></i>HIPAA-protected - your information is never shared</div>
+      <div class="offer-pt"><i data-lucide="check" style="width:16px;height:16px"></i>Flexible payment options available</div>
+    </div>
+    <a class="offer-phone" href="tel:+19416234836"><i data-lucide="phone" style="width:16px;height:16px"></i>Prefer to talk? Call (941) 623-4836</a>
+  </div>
+  <div class="form-panel" data-animate="fade-up" data-delay="0.15" id="contactForm">
+    <form id="consultForm" novalidate>
+      <h3>Request a consultation</h3>
+      <p class="form-sub">We'll reach out within one business day to schedule your visit.</p>
+      <div class="deal-banner"><i data-lucide="badge-percent" style="width:20px;height:20px"></i><span>Submitting this form <strong>locks in your 20% off</strong> Exomind treatment plan - offer valid this month only.</span></div>
+      <div class="form-row">
+        <div class="field"><label for="fName">First name</label><div class="control"><input id="fName" name="firstName" type="text" placeholder="Jane" required></div></div>
+        <div class="field"><label for="lName">Last name</label><div class="control"><input id="lName" name="lastName" type="text" placeholder="Miller" required></div></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="email">Email</label><div class="control"><input id="email" name="email" type="email" placeholder="jane@email.com" required></div></div>
+        <div class="field"><label for="phone">Phone</label><div class="control"><input id="phone" name="phone" type="tel" placeholder="(941) 555-0142" required></div></div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="reason">Reason for consultation</label>
+          <div class="control">
+            <input id="reason" name="reason" type="text" placeholder="e.g. Depression, anxiety, brain fog..." required>
+          </div>
+        </div>
+      </div>
+      <button class="form-submit btn" type="submit">Request My Consultation</button>
+      <p class="consent">By submitting you agree to receive calls/texts/emails about your consultation. Msg &amp; data rates may apply. Reply STOP to opt out. Your information is protected under HIPAA and never shared.</p>
+    </form>
+    <div class="form-success" id="formSuccess">
+      <span class="quiz-result__icon"><i data-lucide="check" style="width:32px;height:32px"></i></span>
+      <h4>Thank you - request received.</h4>
+      <p>Our team will reach out within one business day to schedule your consultation. Prefer to talk now? Call <a href="tel:+19416234836" style="color:var(--sage);font-weight:600">(941) 623-4836</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="sec-head">
+    <div class="mask section-tag-wrap"><span class="eyebrow">Visit Us</span></div>
+    <div class="mask section-title-wrap"><h2 class="sec-title serif">Serving Southwest Florida</h2></div>
+  </div>
+  <div class="contact__split">
+    <div class="contact-info" data-animate="stagger">
+      <div class="info-row">
+        <span class="icon-ring"><i data-lucide="phone" style="width:20px;height:20px"></i></span>
+        <div><div class="lbl">PHONE</div><a class="val" href="tel:+19416234836">(941) 623-4836</a></div>
+      </div>
+      <div class="info-row">
+        <span class="icon-ring"><i data-lucide="mail" style="width:20px;height:20px"></i></span>
+        <div><div class="lbl">EMAIL</div><a class="val" href="mailto:drlkorman@aol.com">drlkorman@aol.com</a></div>
+      </div>
+      <div class="info-row">
+        <span class="icon-ring"><i data-lucide="map-pin" style="width:20px;height:20px"></i></span>
+        <div><div class="lbl">ADDRESS</div><span class="val">16954 Toledo Blade Blvd, Port Charlotte, FL 33954</span></div>
+      </div>
+      <div class="info-row hours-info">
+        <span class="icon-ring"><i data-lucide="clock" style="width:20px;height:20px"></i></span>
+        <div style="flex:1">
+          <div class="lbl">OFFICE HOURS</div>
+          <div class="hours-rows">
+            <div class="hours-row"><span class="d">Monday</span><span class="t">9:00 AM – 5:30 PM</span></div>
+            <div class="hours-row"><span class="d">Tuesday</span><span class="t">10:00 AM – 5:30 PM</span></div>
+            <div class="hours-row"><span class="d">Wednesday</span><span class="t">9:00 AM – 4:00 PM</span></div>
+            <div class="hours-row"><span class="d">Thursday</span><span class="t closed">Closed</span></div>
+            <div class="hours-row"><span class="d">Friday</span><span class="t">8:30 AM – 3:00 PM</span></div>
+            <div class="hours-row"><span class="d">Saturday</span><span class="t">9:00 – 11:00 AM (2nd Sat only)</span></div>
+            <div class="hours-row"><span class="d">Sunday</span><span class="t closed">Closed</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="map-panel" data-animate="fade-up">
+      <iframe title="Map to ARISE Integrative Wellness"
+        src="https://maps.google.com/maps?ftid=0x88dcab98575e4f4b:0xe6023a1b145bbc08&q=ARISE+Integrative+Wellness&ll=27.0279932,-82.1631879&z=15&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <div class="map-overlay">
+        <div>
+          <div class="addr1">16954 Toledo Blade Blvd</div>
+          <div class="addr2">Port Charlotte, FL 33954 · Serving Punta Gorda, North Port &amp; Englewood</div>
+        </div>
+        <a class="btn btn-directions" target="_blank" rel="noopener"
+          href="https://www.google.com/maps/dir/?api=1&destination=ARISE+Integrative+Wellness,+16954+Toledo+Blade+Blvd,+Port+Charlotte,+FL+33954">
+          Get driving directions<i data-lucide="navigation" style="width:16px;height:16px"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq" id="faq">
+  <div class="sec-head">
+    <div class="mask section-tag-wrap"><span class="eyebrow">Frequently Asked Questions</span></div>
+    <div class="mask section-title-wrap"><h2 class="sec-title serif" style="color:var(--ink)"><span>Before you</span><em class="it">book</em></h2></div>
+  </div>
+  <div class="faq-list" data-animate="stagger">
+    <div class="faq-item open">
+      <button class="faq-q"><span class="faq-num">01</span><span class="faq-qtext">How many sessions will I need?</span><i class="faq-chev" data-lucide="chevron-down" style="width:20px;height:20px"></i></button>
+      <div class="faq-a"><p class="faq-a-inner">Most patients complete 6 sessions, twice a week over about three weeks. Some choose optional maintenance sessions afterward to keep results strong.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q"><span class="faq-num">02</span><span class="faq-qtext">Does it hurt?</span><i class="faq-chev" data-lucide="chevron-down" style="width:20px;height:20px"></i></button>
+      <div class="faq-a"><p class="faq-a-inner">Most people describe a gentle tapping sensation on the scalp. The average reported pain score is just 0.2 out of 10, and most patients read or simply rest during treatment.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q"><span class="faq-num">03</span><span class="faq-qtext">What are the side effects?</span><i class="faq-chev" data-lucide="chevron-down" style="width:20px;height:20px"></i></button>
+      <div class="faq-a"><p class="faq-a-inner">Some notice mild scalp discomfort or a light headache in the first sessions, which typically fades quickly. There is no weight gain, fatigue or memory loss associated with Exomind.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q"><span class="faq-num">04</span><span class="faq-qtext">Can I drive myself home?</span><i class="faq-chev" data-lucide="chevron-down" style="width:20px;height:20px"></i></button>
+      <div class="faq-a"><p class="faq-a-inner">Yes. Exomind uses no anesthesia or sedation, so you can drive yourself home and return to work or your day right away.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q"><span class="faq-num">05</span><span class="faq-qtext">How is Exomind different from traditional TMS?</span><i class="faq-chev" data-lucide="chevron-down" style="width:20px;height:20px"></i></button>
+      <div class="faq-a"><p class="faq-a-inner">Exomind uses BTL's newer ExoTMS waveform with comfortable sessions of about 30 minutes and a rapid 6-session protocol, compared with the 36 or more visits of traditional TMS.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q"><span class="faq-num">06</span><span class="faq-qtext">Is it covered by insurance?</span><i class="faq-chev" data-lucide="chevron-down" style="width:20px;height:20px"></i></button>
+      <div class="faq-a"><p class="faq-a-inner">We are a cash-based practice and provide full documentation you can submit to your insurer for possible reimbursement. Flexible payment options are available.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-top">
+    <div class="f-brand">
+      <span class="f-logo"><img src="images/arise_logo_light.png" alt="Arise Integrative Wellness"></span>
+      <p class="f-blurb">Proudly serving Port Charlotte, Punta Gorda, North Port, Englewood &amp; Southwest Florida.</p>
+      <div class="f-social">
+        <a href="https://www.instagram.com/ariseintegrativewellness" target="_blank" rel="noopener" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+        <a href="https://www.facebook.com/ARISEIntegrativeWellness" target="_blank" rel="noopener" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+      </div>
+      <div class="btl-row"><span>Powered by</span><img src="images/btl-logo-lightblue.png" alt="BTL"></div>
+    </div>
+    <div class="f-col f-contact">
+      <span class="f-title">CONTACT</span>
+      <div class="f-crow"><i data-lucide="phone" style="width:16px;height:16px"></i><a href="tel:+19416234836" style="font-size:15px">(941) 623-4836</a></div>
+      <div class="f-crow"><i data-lucide="mail" style="width:16px;height:16px"></i><a href="mailto:drlkorman@aol.com" style="font-size:15px">drlkorman@aol.com</a></div>
+      <div class="f-crow"><i data-lucide="map-pin" style="width:16px;height:16px"></i><span>16954 Toledo Blade Blvd,<br>Port Charlotte, FL 33954</span></div>
+    </div>
+    <div class="f-col hours">
+      <span class="f-title">HOURS</span>
+      <div class="f-hrow"><span class="d">Mon</span><span class="t">9:00 AM – 5:30 PM</span></div>
+      <div class="f-hrow"><span class="d">Tue</span><span class="t">10:00 AM – 5:30 PM</span></div>
+      <div class="f-hrow"><span class="d">Wed</span><span class="t">9:00 AM – 4:00 PM</span></div>
+      <div class="f-hrow"><span class="d">Thu</span><span class="t">Closed</span></div>
+      <div class="f-hrow"><span class="d">Fri</span><span class="t">8:30 AM – 3:00 PM</span></div>
+      <div class="f-hrow"><span class="d">Sat</span><span class="t">9–11 AM (2nd Sat only)</span></div>
+      <div class="f-hrow"><span class="d">Sun</span><span class="t">Closed</span></div>
+    </div>
+  </div>
+  <div class="footer-hairline"></div>
+  <div class="footer-bottom">
+    <span>© 2026 Arise Integrative Wellness. All rights reserved.</span>
+    <span>EXOMIND®, ExoTMS™ and BTL® are trademarks of BTL Industries, Inc.</span>
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollToPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  lucide.createIcons();
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  gsap.defaults({ ease: "power3.out", duration: 0.6 });
+
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const touch = "ontouchstart" in window || navigator.maxTouchPoints > 0
+    || matchMedia("(hover: none), (pointer: coarse)").matches;
+  const mobile = matchMedia("(max-width: 768px)").matches;
+
+  /* ---------- Lenis smooth scroll [OBSERVED §3.7] ---------- */
+  let lenis = null;
+  if (!reduced && !touch && window.Lenis) {
+    lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true, touchMultiplier: 2,
+    });
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add((t) => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+  }
+  const scrollToTarget = (target) => {
+    const el = document.querySelector(target);
+    if (!el) return;
+    if (lenis) lenis.scrollTo(el, { duration: 1.2, offset: 0 });
+    else if (!reduced) gsap.to(window, { scrollTo: el, duration: 1.2, ease: "expo.out" });
+    else el.scrollIntoView();
+  };
+  document.querySelectorAll('a[href^="#"]').forEach((a) => {
+    a.addEventListener("click", (e) => {
+      const href = a.getAttribute("href");
+      if (href.length > 1) { e.preventDefault(); scrollToTarget(href); }
+    });
+  });
+
+  if (reduced) {
+    gsap.set("[data-animate], .navbar, .hero__media, .hero__overlay, .hero__title-line, .hero__info-item, .hero__bottom, [data-card-stagger] > *", { clearProps: "all", opacity: 1 });
+  } else {
+
+    /* ---------- Hero on-load timeline [OBSERVED §2] ---------- */
+    gsap.set(".navbar", { yPercent: -120 });
+    gsap.set(".hero__media", { autoAlpha: 0, scale: 1.05 });
+    gsap.set(".hero__overlay", { opacity: 0 });
+    gsap.set(".hero__title-line, .hero__info-item", { yPercent: 110 });
+    gsap.set(".hero__bottom", { autoAlpha: 0, y: 30 });
+
+    const heroTl = gsap.timeline({ delay: 0.1, defaults: { ease: "power3.out" } });
+    heroTl.to(".hero__media", { autoAlpha: 1, scale: 1, duration: 1 }, 0)
+      .to(".hero__overlay", { opacity: 1, duration: 0.8 }, 0.1)
+      .to(".navbar", { yPercent: 0, duration: 0.6, ease: "power2.out" }, 0.15)
+      .to(".hero__title-line", { yPercent: 0, duration: 0.8, stagger: 0.1 }, 0.45)
+      .to(".hero__info-item", { yPercent: 0, duration: 0.6, stagger: 0.08 }, 0.75)
+      .to(".hero__bottom", { autoAlpha: 1, y: 0, duration: 0.6 }, 0.75);
+
+    /* ---------- Section header masked reveal [OBSERVED §3.1] ---------- */
+    document.querySelectorAll("section, .consult, .stories, .why, .contact, .faq").forEach((section) => {
+      const tag = section.querySelector(".section-tag-wrap > *");
+      const title = section.querySelector(".section-title-wrap > *");
+      if (!tag && !title) return;
+      if (tag) gsap.set(tag, { y: 60 });
+      if (title) gsap.set(title, { yPercent: 110 });
+      ScrollTrigger.create({
+        trigger: section, start: mobile ? "top 85%" : "top 75%", once: true, fastScrollEnd: true,
+        onEnter: () => {
+          const tl = gsap.timeline();
+          if (tag) tl.to(tag, { y: 0, duration: 0.65, ease: "power3.out" }, 0);
+          if (title) tl.to(title, { yPercent: 0, duration: 0.68, ease: "power3.out" }, tag ? 0.15 : 0);
+        },
+      });
+    });
+
+    /* ---------- data-animate reveals [OBSERVED §3.2] ---------- */
+    const FROM = {
+      "fade-up": { y: mobile ? 20 : 40, autoAlpha: 0 },
+      "fade-down": { y: mobile ? -20 : -40, autoAlpha: 0 },
+      "fade-in": { autoAlpha: 0 },
+      "slide-left": { x: mobile ? 30 : 60, autoAlpha: 0 },
+      "slide-right": { x: mobile ? -30 : -60, autoAlpha: 0 },
+      "scale-up": { scale: 0.9, autoAlpha: 0 },
+      "scale-down": { scale: 1.1, autoAlpha: 0 },
+    };
+    document.querySelectorAll("[data-animate]").forEach((el) => {
+      const type = el.dataset.animate || "fade-in";
+      const dur = parseFloat(el.dataset.duration || "0.6");
+      const delay = parseFloat(el.dataset.delay || "0");
+      if (type === "stagger") {
+        gsap.from(el.children, {
+          y: mobile ? 15 : 30, autoAlpha: 0, duration: dur, stagger: mobile ? 0.08 : 0.1, delay,
+          ease: "power3.out", clearProps: "transform",
+          scrollTrigger: { trigger: el, start: mobile ? "top 90%" : "top 85%", once: true, fastScrollEnd: true },
+        });
+      } else {
+        gsap.from(el, {
+          ...FROM[type], duration: dur, delay, ease: "power3.out", clearProps: "transform",
+          scrollTrigger: { trigger: el, start: mobile ? "top 90%" : "top 85%", once: true, fastScrollEnd: true },
+        });
+      }
+    });
+
+    /* ---------- card-grid stagger [OBSERVED §3.3] ---------- */
+    document.querySelectorAll("[data-card-stagger]").forEach((grid) => {
+      gsap.from(grid.children, {
+        y: 30, autoAlpha: 0, duration: 0.5, ease: "expo.out", clearProps: "transform",
+        stagger: parseFloat(grid.dataset.cardStagger || "0.1"),
+        scrollTrigger: { trigger: grid, start: mobile ? "top 85%" : "top 80%", once: true, fastScrollEnd: true },
+      });
+    });
+
+    /* ---------- scrubbed parallax [OBSERVED §3.5, desktop only] ---------- */
+    if (matchMedia("(min-width: 769px)").matches) {
+      document.querySelectorAll("[data-parallax]").forEach((el) => {
+        gsap.to(el, {
+          y: () => parseFloat(el.dataset.parallax || "0.5") * 100, ease: "none",
+          scrollTrigger: { trigger: el, start: "top bottom", end: "bottom top", scrub: 1 },
+        });
+      });
+    }
+
+    /* ---------- button press [FALLBACK §5] ---------- */
+    document.querySelectorAll(".btn, .quiz-answer").forEach((btn) => {
+      btn.addEventListener("pointerdown", () => gsap.to(btn, { scale: 0.98, duration: 0.1, ease: "power2.out" }));
+      btn.addEventListener("pointerup", () => gsap.to(btn, { scale: 1, duration: 0.15 }));
+      btn.addEventListener("pointerleave", () => gsap.to(btn, { scale: 1, duration: 0.15 }));
+    });
+  }
+
+  /* ---------- Stat count-up on scroll ---------- */
+  document.querySelectorAll(".stat__value[data-count]").forEach((el) => {
+    const end = parseFloat(el.dataset.count);
+    const dec = parseInt(el.dataset.decimals || "0", 10);
+    const suf = el.dataset.suffix || "";
+    const fmt = (v) => v.toFixed(dec) + suf;
+    if (reduced) { el.textContent = fmt(end); return; }
+    const obj = { v: 0 };
+    gsap.to(obj, {
+      v: end, duration: 1.6, ease: "power3.out",
+      onUpdate: () => { el.textContent = fmt(obj.v); },
+      scrollTrigger: { trigger: el, start: "top 85%", once: true, fastScrollEnd: true },
+    });
+  });
+
+  /* ---------- Scroll-linked parallax-zoom (What is Exomind image) ---------- */
+  const pxHolder = document.getElementById("pxHolder");
+  const pxImg = document.getElementById("pxImg");
+  if (pxHolder && pxImg && !reduced) {
+    const scaleFrom = 1.35, scaleTo = 1.0, parallax = 0.07;
+    const clampP = (v) => Math.max(0, Math.min(1, v));
+    const renderPx = () => {
+      const r = pxHolder.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const p = clampP((vh - r.top) / (vh + r.height));
+      const s = scaleFrom + (scaleTo - scaleFrom) * p;
+      const y = (p - 0.5) * 2 * parallax * r.height;
+      pxImg.style.transform = `translate3d(0, ${y.toFixed(2)}px, 0) scale3d(${s.toFixed(4)}, ${s.toFixed(4)}, 1)`;
+    };
+    if (lenis) lenis.on("scroll", renderPx);
+    else window.addEventListener("scroll", renderPx, { passive: true });
+    window.addEventListener("resize", renderPx);
+    renderPx();
+  }
+
+  /* ---------- Session step cards: 3D flip (GSAP) ---------- */
+  document.querySelectorAll(".tl-step").forEach((step) => {
+    const inner = step.querySelector(".tl-inner");
+    if (!inner) return;
+    if (reduced) return;
+    const flip = () => gsap.to(inner, { rotationY: 180, duration: 0.7, ease: "power3.inOut" });
+    const unflip = () => gsap.to(inner, { rotationY: 0, duration: 0.7, ease: "power3.inOut" });
+    if (touch) {
+      step.addEventListener("click", () => {
+        (gsap.getProperty(inner, "rotationY") > 90 ? unflip : flip)();
+      });
+    } else {
+      step.addEventListener("mouseenter", flip);
+      step.addEventListener("mouseleave", unflip);
+    }
+  });
+
+  /* ---------- Rolling icon animation on Why Arise rows (GSAP) ---------- */
+  if (!reduced && !touch) {
+    document.querySelectorAll(".why .why-row").forEach((row) => {
+      const ring = row.querySelector(".icon-ring");
+      if (!ring) return;
+      gsap.set(ring, { transformOrigin: "50% 50%", willChange: "transform" });
+      let rollTween = null;
+      row.addEventListener("mouseenter", () => {
+        if (rollTween) rollTween.kill();
+        rollTween = gsap.fromTo(ring,
+          { x: -22, rotation: -360 },
+          { x: 0, rotation: 0, duration: 0.9, ease: "back.out(1.4)" });
+      });
+      row.addEventListener("mouseleave", () => {
+        if (rollTween) rollTween.kill();
+        rollTween = gsap.to(ring, { x: 0, rotation: 0, duration: 0.35, ease: "power2.out" });
+      });
+    });
+  }
+
+  /* ---------- Avatar cluster fan-out on hover (GSAP) ---------- */
+  const cluster = document.querySelector(".avatar-cluster");
+  if (cluster && !reduced) {
+    const avs = cluster.querySelectorAll(".av");
+    const more = cluster.querySelector(".more");
+    cluster.addEventListener("pointerenter", () => {
+      gsap.to(avs, {
+        x: (i) => i * 16, y: -6, scale: 1.08,
+        rotation: (i) => (i % 2 ? 6 : -6),
+        duration: 0.5, ease: "back.out(2)", stagger: 0.05,
+      });
+      gsap.to(more, { x: 52, color: "#505A51", duration: 0.5, ease: "back.out(2)" });
+    });
+    cluster.addEventListener("pointerleave", () => {
+      gsap.to(avs, { x: 0, y: 0, scale: 1, rotation: 0, duration: 0.45, ease: "power3.out", stagger: 0.04 });
+      gsap.to(more, { x: 0, color: "rgba(64,70,65,.5)", duration: 0.45, ease: "power3.out" });
+    });
+  }
+
+  /* ---------- Touch devices: tap toggles the hover effects ---------- */
+  if (touch) {
+    document.querySelectorAll(".review,.why-row,.offer-pt,.cond-tile,.fda-chip,.film,.shot,.f-logo,.btl-row").forEach((el) => {
+      el.addEventListener("click", () => {
+        const was = el.classList.contains("tap-active");
+        document.querySelectorAll(".tap-active").forEach((x) => x.classList.remove("tap-active"));
+        if (!was) {
+          el.classList.add("tap-active");
+          if (el.classList.contains("why-row") && !reduced) {
+            const ring = el.querySelector(".icon-ring");
+            if (ring) gsap.fromTo(ring, { x: -22, rotation: -360 }, { x: 0, rotation: 0, duration: 0.9, ease: "back.out(1.4)" });
+          }
+        }
+      });
+    });
+  }
+
+  /* ---------- Mobile menu ---------- */
+  const mm = document.getElementById("mobileMenu");
+  const openMM = () => {
+    mm.style.visibility = "visible";
+    gsap.fromTo(mm, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, ease: "power2.out" });
+    gsap.from(mm.querySelectorAll("a"), { y: 24, autoAlpha: 0, duration: 0.5, stagger: 0.06, ease: "power3.out", delay: 0.1 });
+  };
+  const closeMM = () => gsap.to(mm, { autoAlpha: 0, duration: 0.25, ease: "power2.in", onComplete: () => { mm.style.visibility = "hidden"; } });
+  document.getElementById("burger").addEventListener("click", openMM);
+  document.getElementById("mmClose").addEventListener("click", closeMM);
+  mm.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMM));
+
+  /* ---------- FAQ accordion ---------- */
+  document.querySelectorAll(".faq-item").forEach((item) => {
+    const btn = item.querySelector(".faq-q");
+    const panel = item.querySelector(".faq-a");
+    if (item.classList.contains("open")) gsap.set(panel, { height: "auto" });
+    btn.addEventListener("click", () => {
+      const isOpen = item.classList.contains("open");
+      document.querySelectorAll(".faq-item.open").forEach((other) => {
+        if (other !== item) {
+          other.classList.remove("open");
+          gsap.to(other.querySelector(".faq-a"), { height: 0, duration: 0.35, ease: "power2.inOut" });
+        }
+      });
+      item.classList.toggle("open", !isOpen);
+      gsap.to(panel, {
+        height: isOpen ? 0 : "auto", duration: 0.4,
+        ease: isOpen ? "power2.in" : "power2.out",
+        onComplete: () => ScrollTrigger.refresh(),
+      });
+    });
+  });
+
+  /* ---------- Patient story video ---------- */
+  const poster = document.getElementById("storyPoster");
+  poster.addEventListener("click", () => {
+    if (poster.classList.contains("playing")) return;
+    poster.classList.add("playing");
+    const vid = document.createElement("video");
+    vid.src = "images/exomind-testimonials.mp4";
+    vid.controls = true; vid.autoplay = true; vid.playsInline = true;
+    gsap.set(vid, { autoAlpha: 0 });
+    poster.appendChild(vid);
+    gsap.to(vid, { autoAlpha: 1, duration: 0.4 });
+    gsap.to(poster.querySelector(".story-play"), { autoAlpha: 0, scale: 0.8, duration: 0.3 });
+  });
+
+  /* ---------- Quiz ---------- */
+  const questions = [
+    { q: "What are you struggling with most?", a: ["Depression", "Anxiety", "Focus", "Eating habits"] },
+    { q: "Have medications or talk therapy fallen short for you?", a: ["Yes", "Somewhat", "No"] },
+    { q: "How long have you been feeling this way?", a: ["Under 6 months", "6-12 months", "Over a year"] },
+    { q: "When would you like to start?", a: ["As soon as possible", "Within a month", "Just researching"] },
+  ];
+  let qIndex = 0;
+  const picks = new Array(questions.length).fill(null);
+  const elStep = document.getElementById("quizStep");
+  const elFill = document.getElementById("quizFill");
+  const elQ = document.getElementById("quizQuestion");
+  const elAnswers = document.getElementById("quizAnswers");
+  const elBack = document.getElementById("quizBack");
+  const elNext = document.getElementById("quizNext");
+  const elQA = document.getElementById("quizQA");
+  const elMain = document.getElementById("quizMain");
+  const elResult = document.getElementById("quizResult");
+
+  function renderQuestion(dir) {
+    const data = questions[qIndex];
+    elStep.textContent = `Question ${qIndex + 1} of ${questions.length}`;
+    elFill.style.width = `${((qIndex + 1) / questions.length) * 100}%`;
+    elQ.textContent = data.q;
+    elAnswers.innerHTML = "";
+    data.a.forEach((label) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "quiz-answer" + (picks[qIndex] === label ? " selected" : "");
+      b.innerHTML = `<span class="ans-check"><i data-lucide="check" style="width:16px;height:16px"></i></span>${label}`;
+      b.addEventListener("click", () => {
+        picks[qIndex] = label;
+        elAnswers.querySelectorAll(".quiz-answer").forEach((x) => x.classList.remove("selected"));
+        b.classList.add("selected");
+        elNext.removeAttribute("disabled");
+      });
+      elAnswers.appendChild(b);
+    });
+    lucide.createIcons();
+    if (picks[qIndex]) elNext.removeAttribute("disabled"); else elNext.setAttribute("disabled", "");
+    if (qIndex === 0) elBack.setAttribute("disabled", ""); else elBack.removeAttribute("disabled");
+    elNext.childNodes[0].textContent = qIndex === questions.length - 1 ? "See my result" : "Next question";
+    if (!reduced && dir !== 0) {
+      gsap.fromTo(elQA, { autoAlpha: 0, x: 24 * dir }, { autoAlpha: 1, x: 0, duration: 0.45, ease: "power3.out", clearProps: "transform" });
+    }
+  }
+  elNext.addEventListener("click", () => {
+    if (qIndex < questions.length - 1) { qIndex++; renderQuestion(1); }
+    else {
+      if (reduced) { elMain.style.display = "none"; elResult.style.display = "flex"; }
+      else {
+        gsap.to(elMain, { autoAlpha: 0, y: -14, duration: 0.3, ease: "power2.in", onComplete: () => {
+          elMain.style.display = "none";
+          elResult.style.display = "flex";
+          gsap.fromTo(elResult, { autoAlpha: 0, y: 20, scale: 0.97 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.5, ease: "expo.out" });
+          gsap.from(elResult.children, { y: 20, autoAlpha: 0, duration: 0.5, stagger: 0.08, ease: "power3.out", delay: 0.15 });
+          ScrollTrigger.refresh();
+        }});
+      }
+    }
+  });
+  elBack.addEventListener("click", () => { if (qIndex > 0) { qIndex--; renderQuestion(-1); } });
+  renderQuestion(0);
+
+  /* ---------- Form ---------- */
+  const form = document.getElementById("consultForm");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    const success = document.getElementById("formSuccess");
+    if (reduced) { form.style.display = "none"; success.style.display = "flex"; return; }
+    gsap.to(form, { autoAlpha: 0, y: -10, duration: 0.3, ease: "power2.in", onComplete: () => {
+      form.style.display = "none";
+      success.style.display = "flex";
+      gsap.fromTo(success, { autoAlpha: 0, y: 16, scale: 0.98 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.5, ease: "expo.out" });
+      ScrollTrigger.refresh();
+    }});
+  });
+
+  window.addEventListener("load", () => ScrollTrigger.refresh());
+});
+</script>
+</body>
+</html>
