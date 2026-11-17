@@ -10,6 +10,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
 <title>Exomind TMS Therapy in Port Charlotte, FL | Arise Integrative Wellness</title>
 <meta name="description" content="FDA-cleared Exomind TMS uses focused magnetic pulses to restore healthy brain activity - no medication, no downtime. Serving Port Charlotte & Southwest Florida.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -334,6 +335,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .field .control svg{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:rgba(64,70,65,.5);pointer-events:none}
   .form-submit{width:100%;height:50px;margin-top:6px;background:var(--sage);color:#fff;font-size:16px;font-weight:500;border-radius:8px}
   .form-submit:hover{background:var(--sage-hover)}
+  .form-submit:disabled{opacity:.6;cursor:not-allowed}
+  .consent-check{display:flex;gap:10px;align-items:flex-start;margin:2px 0 14px;font-size:11.5px;line-height:1.55;color:rgba(64,70,65,.7);cursor:pointer}
+  .consent-check input{flex:none;width:16px;height:16px;margin:1px 0 0;accent-color:var(--sage);cursor:pointer}
+  .form-error{display:none;margin:0 0 10px;font-size:13px;line-height:1.5;color:#b3261e}
   .consent{padding-top:16px;font-size:11.5px;line-height:1.55;color:rgba(64,70,65,.5)}
   .form-success{display:none;flex-direction:column;align-items:center;gap:16px;text-align:center;padding:40px 0}
   .form-success .quiz-result__icon{background:var(--sage);color:#fff}
@@ -563,6 +568,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="field"><label for="hfPhone">Phone</label><div class="control"><input id="hfPhone" name="phone" type="tel" placeholder="(941) 555-0142" required></div></div>
         <div class="field"><label for="hfEmail">Email</label><div class="control"><input id="hfEmail" name="email" type="email" placeholder="jane@email.com" required></div></div>
+        <label class="consent-check" for="hfConsent"><input id="hfConsent" name="consent" type="checkbox" required><span>I agree to receive calls/texts/emails about my consultation. Msg &amp; data rates may apply. Reply STOP to opt out.</span></label>
+        <div class="form-error" role="alert" aria-live="polite"></div>
         <button class="form-submit btn" type="submit">Get My Free Consult</button>
         <div class="hf-perks"><i data-lucide="badge-percent" style="width:14px;height:14px"></i>Free consult · Free demo · 20% off</div>
       </form>
@@ -918,8 +925,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
+      <label class="consent-check" for="cfConsent"><input id="cfConsent" name="consent" type="checkbox" required><span>I agree to receive calls/texts/emails about my consultation. Msg &amp; data rates may apply. Reply STOP to opt out. Your information is protected under HIPAA and never shared.</span></label>
+      <div class="form-error" role="alert" aria-live="polite"></div>
       <button class="form-submit btn" type="submit">Request My Consultation</button>
-      <p class="consent">By submitting you agree to receive calls/texts/emails about your consultation. Msg &amp; data rates may apply. Reply STOP to opt out. Your information is protected under HIPAA and never shared.</p>
     </form>
     <div class="form-success" id="formSuccess">
       <span class="quiz-result__icon"><i data-lucide="check" style="width:32px;height:32px"></i></span>
@@ -1407,36 +1415,92 @@ document.addEventListener("DOMContentLoaded", () => {
   elBack.addEventListener("click", () => { if (qIndex > 0) { qIndex--; renderQuestion(-1); } });
   renderQuestion(0);
 
-  /* ---------- Form ---------- */
-  const form = document.getElementById("consultForm");
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (!form.checkValidity()) { form.reportValidity(); return; }
-    const success = document.getElementById("formSuccess");
-    if (reduced) { form.style.display = "none"; success.style.display = "flex"; return; }
-    gsap.to(form, { autoAlpha: 0, y: -10, duration: 0.3, ease: "power2.in", onComplete: () => {
-      form.style.display = "none";
-      success.style.display = "flex";
-      gsap.fromTo(success, { autoAlpha: 0, y: 16, scale: 0.98 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.5, ease: "expo.out" });
-      ScrollTrigger.refresh();
-    }});
-  });
+  /* ---------- Forms (AEVA contact API) ---------- */
+  const AEVA_ENDPOINT = "https://api.aevadigital.com/api/v1/contacts/add_contact_from_form/";
+  const AEVA_ORG = "b8363156-1004-40f2-9b2e-18cbfcccec01";
+  const AEVA_FORM_ID = "654";
 
-  /* ---------- Hero form ---------- */
-  const heroForm = document.getElementById("heroForm");
-  if (heroForm) {
-    heroForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      if (!heroForm.checkValidity()) { heroForm.reportValidity(); return; }
-      const hs = document.getElementById("heroFormSuccess");
-      if (reduced) { heroForm.style.display = "none"; hs.style.display = "flex"; return; }
-      gsap.to(heroForm, { autoAlpha: 0, y: -10, duration: 0.3, ease: "power2.in", onComplete: () => {
-        heroForm.style.display = "none";
-        hs.style.display = "flex";
-        gsap.fromTo(hs, { autoAlpha: 0, y: 16, scale: 0.98 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.5, ease: "expo.out" });
+  function wireForm(form, success, withMessage) {
+    if (!form) return;
+    const submitBtn = form.querySelector(".form-submit");
+    const errEl = form.querySelector(".form-error");
+    const val = (name) => (form.elements[name]?.value || "").trim();
+    const showError = (msg) => {
+      errEl.textContent = msg;
+      errEl.style.display = msg ? "block" : "none";
+    };
+    const showSuccess = () => {
+      if (reduced) { form.style.display = "none"; success.style.display = "flex"; return; }
+      gsap.to(form, { autoAlpha: 0, y: -10, duration: 0.3, ease: "power2.in", onComplete: () => {
+        form.style.display = "none";
+        success.style.display = "flex";
+        gsap.fromTo(success, { autoAlpha: 0, y: 16, scale: 0.98 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.5, ease: "expo.out" });
+        ScrollTrigger.refresh();
       }});
+    };
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      showError("");
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      const email = val("email");
+      if (!/^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/.test(email)) {
+        showError("Please enter a valid email address.");
+        return;
+      }
+
+      // Accept formatted input like (941) 555-0142 or +1 941 555 0142
+      let phone = val("phone").replace(/\D/g, "");
+      if (phone.length === 11 && phone.startsWith("1")) phone = phone.slice(1);
+      if (!/^[0-9]{10}$/.test(phone)) {
+        showError("Please enter a 10-digit US phone number.");
+        return;
+      }
+
+      const fd = new FormData();
+      fd.append("first_name", val("firstName"));
+      fd.append("last_name", val("lastName"));
+      fd.append("phone", `+1${phone}`);
+      fd.append("email", email);
+      fd.append("checkbox", form.elements.consent?.checked ? "on" : "");
+      fd.append("organization", AEVA_ORG);
+      fd.append("form", AEVA_FORM_ID);
+      fd.append("message", withMessage ? val("reason") : "");
+      fd.append("form_location", window.location.href);
+
+      // Detect ad tracking params from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const trackingMap = { gclid: "google", wbraid: "google", gbraid: "google", fbclid: "meta", ttclid: "tiktok" };
+      let trackingParam = "";
+      let adSource = "other";
+      for (const [param, source] of Object.entries(trackingMap)) {
+        const v = urlParams.get(param);
+        if (v) { trackingParam = v; adSource = source; break; }
+      }
+      fd.append("tracking_param", trackingParam);
+      fd.append("ad_source", adSource);
+
+      submitBtn.disabled = true;
+      try {
+        const res = await fetch(AEVA_ENDPOINT, { method: "POST", body: fd });
+        if (!res.ok) {
+          const txt = await res.text().catch(() => res.statusText);
+          throw new Error(txt || "Server error");
+        }
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: "form-success" });
+        showSuccess();
+      } catch (err) {
+        console.error(err);
+        showError("Submission failed. Please try again.");
+        submitBtn.disabled = false;
+      }
     });
   }
+
+  wireForm(document.getElementById("heroForm"), document.getElementById("heroFormSuccess"), false);
+  wireForm(document.getElementById("consultForm"), document.getElementById("formSuccess"), true);
 
   window.addEventListener("load", () => ScrollTrigger.refresh());
 });
